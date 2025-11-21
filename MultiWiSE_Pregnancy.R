@@ -692,7 +692,7 @@ for (ID in all_ids) {
   
 }
 
-# Save processed CSD data to a .RDS and .csv file
+# Save processed individual-level data to a .csv file
 write_csv(all_exp_profile_preg[,c('IndividualID',
                            'epiweek',
                            'n_days',
@@ -712,7 +712,7 @@ write_csv(all_exp_profile_preg[,c('IndividualID',
                            'severe_episode_id')],
           './Ind_Pregnancy_Weekly_PM25_Episode_Estimates.csv')
 
-# Save CSD metrics to .csv file and .RDS file
+# Save individual-level metrics for pregnancy and each trimester to .csv file
 all_metrics_preg <- all_metrics_preg[,c(18:19,1:17)]
 names(all_metrics_preg) <- c('IndividualID', 'Window', '1_Cumulative_WFS_PM25', 
                             '2_WFS_Fraction', 
